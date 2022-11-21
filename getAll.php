@@ -1,7 +1,5 @@
-function db_connect(){
-	$db = new mysqli("localhost", "ICT", "password", "my_ICT");
-    return $db;
-}
+include 'connessione.php';
+
 
 function articolo($db,$art){
   $stmt = $db->prepare("SELECT * from articoli WHERE id=?");
